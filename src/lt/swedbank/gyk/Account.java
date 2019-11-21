@@ -12,6 +12,8 @@ public class Account {
 
     private BigDecimal balance;
 
+    private Currency currency;
+
     public String getNumber() {
         return number;
     }
@@ -36,6 +38,14 @@ public class Account {
         this.balance = balance;
     }
 
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
+    }
+
     public void addToTransactionHistory(Payment payment) {
         if (transactionHistory == null) {
             transactionHistory = new ArrayList<>();
@@ -57,6 +67,7 @@ public class Account {
         return "Account{" +
                 "number='" + number + '\'' +
                 ", balance=" + balance +
+                ", currency=" + currency +
                 '}';
     }
 }
