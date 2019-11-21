@@ -2,7 +2,7 @@ package lt.swedbank.gyk;
 
 import java.math.BigDecimal;
 
-public class Payment {
+public class Payment implements Transaction {
     private Account sourceAccount;
 
     private Account destinationAccount;

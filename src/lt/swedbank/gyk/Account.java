@@ -8,7 +8,7 @@ public class Account {
 
     private String number;
 
-    private List<Payment> transactionHistory;
+    private List<Transaction> transactionHistory;
 
     private BigDecimal balance;
 
@@ -22,11 +22,11 @@ public class Account {
         this.number = number;
     }
 
-    public List<Payment> getTransactionHistory() {
+    public List<Transaction> getTransactionHistory() {
         return transactionHistory;
     }
 
-    public void setTransactionHistory(List<Payment> transactionHistory) {
+    public void setTransactionHistory(List<Transaction> transactionHistory) {
         this.transactionHistory = transactionHistory;
     }
 
@@ -46,12 +46,12 @@ public class Account {
         this.currency = currency;
     }
 
-    public void addToTransactionHistory(Payment payment) {
+    public void addToTransactionHistory(Transaction transaction) {
         if (transactionHistory == null) {
             transactionHistory = new ArrayList<>();
         }
 
-        transactionHistory.add(payment);
+        transactionHistory.add(transaction);
     }
 
     public void addAmount(BigDecimal amount) {

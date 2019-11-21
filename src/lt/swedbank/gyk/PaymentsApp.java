@@ -100,6 +100,16 @@ public class PaymentsApp {
 
         payments.add(secondPayment);
 
+        InternationalPayment thirdPayment = new TaxedInternationalPayment();
+
+        thirdPayment.setSourceAccount(sourceAccount);
+        thirdPayment.setDestinationAccount(destinationAccount);
+        thirdPayment.setDate("2019-11-09");
+        thirdPayment.setAmount(new BigDecimal("100.00"));
+        thirdPayment.setCurrency(Currency.EUR);
+
+        payments.add(thirdPayment);
+
         return payments;
     }
 
